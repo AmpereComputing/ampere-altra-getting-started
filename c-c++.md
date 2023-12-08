@@ -1,4 +1,4 @@
-# C/C++ on Graviton
+# C/C++ on Ampere
 
 ### Enabling Arm Architecture Specific Features
 
