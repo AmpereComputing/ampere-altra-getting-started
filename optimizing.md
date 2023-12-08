@@ -1,4 +1,4 @@
-# Optimizing for Graviton
+# Optimizing for Ampere processors
 
 ## Debugging Problems
 
