@@ -114,7 +114,7 @@ If you are running applications on CSPs, it's time to update your infrastructure
 Once your infrastructure is ready to support Ampere processor based system, you can start a Canary or Blue-Green deployment to re-direct a portion of application traffic to the Ampere processor based instances. Ideally initial tests will run in a development environment to load test with production traffic patterns. Monitor the application closely to ensure expected behavior. Once your application is running as expected on Ampere processor based system you can define and execute your transition strategy and begin to enjoy the benefits of increased price-performance.
 
 
-### _Appendix A - locating packages for Arm64/Ampere-Processors
+### _Appendix A - locating packages for Arm64/Ampere-Processors_
 
 Remember: When locating software be aware that some tools, including  GCC, refer to the architecture as AArch64, others including the Linux Kernel, call it arm64. When checking packages across various repositories, you’ll find those different naming conventions, and in some cases just “ARM”.
 
