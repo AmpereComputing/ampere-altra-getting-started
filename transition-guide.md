@@ -1,9 +1,6 @@
-# Considerations when transitioning workloads to Ampere processor based bare-metals or instances
+# Considerations when transitioning workloads to Ampere processor based instances or bare-metals
 
-With the transition from legacy x86 to AArch64 and particularly Ampere processors gaining momentum, developers are looking for ways to expedite the migration for existing codebases. Ampere processors available on both bare-metals and instances on many major Cloud Service Providers.
-Ampere partners with the best system providers the world has to allow build your own infrastructure. The bare-metals platforms we use to provide seamless integrations are detailed listed by manufacturer and model can be found [here](https://amperecomputing.com/systems/altra).
-Ampere processors also power the Arm64 instances on many major Cloud Service Providers, among them A1 and A2 instances on Oracle Cloud Infrastructure, Dps, Dpds, Eps, and Epds instances on Azure, and Tau T2a and C3a instances on Google Cloud Platform. These instances type provide the best price-performance for a wide variety of Linux-based workloads. Examples include application servers, micro-services, CPU-based machine learning inference, video encoding, electronic design automation, gaming, open-source databases, and in-memory caches. In most cases transitioning to Ampere instances is as simple as updating your infrastructure-as-code to select the new instance type and associated Operating System (OS) images. 
-However, because Ampere processors implement the Arm64 instruction set, no matter you decide build your own infrastructure or using instances on CSPs, there can be additional software implications. This transition guide provides a step-by-step approach to assess your workload to identify and address any potential software changes that might be needed.
+Ampere processors power the Arm64 instances on many major Cloud Service Providers, among them A1 and A2 instances on Oracle Cloud Infrastructure, Dps, Dpds, Eps, and Epds instances on Azure, and Tau T2a and C3a instances on Google Cloud Platform. These instances type provide the best price-performance for a wide variety of Linux-based workloads. Examples include application servers, micro-services, CPU-based machine learning inference, video encoding, electronic design automation, gaming, open-source databases, and in-memory caches. In most cases transitioning to Ampere instances is as simple as updating your infrastructure-as-code to select the new instance type and associated Operating System (OS) images. Ampere also partners with the best system providers the world has to allow building your own infrastructure. The bare-metal platforms we use to provide seamless integrations are detailed listed by manufacturer and model can be found [here](https://amperecomputing.com/systems/altra). However, because Ampere processors implement the Arm64 instruction set, no matter you decide to use instances on CSPs or build your own infrastructures, there can be additional software implications. This transition guide provides a step-by-step approach to assess your workload to identify and address any potential software changes that might be needed.
 
 ## Introduction - identifying target workloads
 
@@ -21,7 +18,7 @@ The following transition guide is organized into a logical sequence of steps as 
     * Step 5 - Testing and optimizing your workload
     * Step 6 - Performance testing
 * [Infrastructure and deployment](#infrastructure-and-deployment)
-    * Step 7 - Apply Arm64 code to infrastructure
+    * Step 7 - Update your infrastructure as code
     * Step 8 - Perform canary or Blue-Green deployment
 
 ### Learning and exploring
@@ -103,11 +100,9 @@ If after reading the documentation in this repository and following the recommen
 
 ### Infrastructure and deployment
 
-**Step 7 - Apply Arm64 code to infrastructure**
+**Step 7 - Update your infrastructure as code**
 
-Now you have a tested and performant application, its time to deploy Arm64 application to your infrastructure.
-If you are running applications on your own on-premise infrastructure, it's your choice to either apply the application by container orchestration like Kubernetes in a Ampere processor based cluster, or using Systemd to manage your application on a single Linux server.
-If you are running applications on CSPs, it's time to update your infrastructure as code on CSPs to add support for Ampere processor based instances. This typically includes updating instance types, image IDs, autoscaling-groups to support multi-architecture (see Step 4), and finally deploying or redeploying your infrastructure on cloud.
+Now you have a tested and performant application, its time to update your infrastructure as code to add support for Ampere processor based instances or clusters. This typically includes updating instance types, image IDs, autoscaling-groups to support multi-architecture on CSPs or provisioning clusters by infrastructure-as-code tools, and finally deploying or redeploying your infrastructure.
 
 **Step 8 - Perform canary or Blue-Green deployment**
 
