@@ -22,6 +22,7 @@ FreeBSD | 12.1 or later | No | 4KB | [Community](https://www.freebsd.org/release
 FreeBSD | 13.0 or later | Yes | 4KB | [Community](https://www.freebsd.org/releases/13.0R/announce.html) or [MarketPlace](https://aws.amazon.com/marketplace/pp/B09291VW11) | No | Device hotplug and API shutdown don't work
  Flatcar Linux | 3033.2.0 or later | Yes | 4KB | [AMIs](https://www.flatcar.org/docs/latest/installing/cloud/aws-ec2/) or [marketplace](https://aws.amazon.com/marketplace/pp/prodview-zmao5idgwafbi) | Yes | |
 Rocky Linux | 8.4 or later | Yes (*) | 64KB (*) | [ISOs](https://rockylinux.org/download) | | [Release Notes](https://docs.rockylinux.org/release_notes/8-changelog/)<br>(*) details to be confirmed once AMI's are available
+NixOS | All Versions | Not confirmed | 4KB (*) | [ISOs](https://nixos.org/download/) | |
 
 
 OS Name | Minimum recommended Linux kernel version for Graviton2
